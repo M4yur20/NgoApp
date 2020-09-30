@@ -28,5 +28,5 @@ Screenshots:
 
 
 ## Contributors:
-#### Mayur Agarwal
-[Github link]()
+#### Vinayak Mishra
+[https://github.com/Vinayak333-tech/ngoapp]()
