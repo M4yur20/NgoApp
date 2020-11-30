@@ -163,7 +163,7 @@ def edit_view(request):
         myngo = Ngo.objects.get(founder=request.user)
         val = myngo.ngorequirementdetail_set.all().filter(req=requirement)
         if not val:
-            messages.success(request, f'You Entered the Requirement which is NOT present in your NGO, Try Again!')
+            messages.error(request, f'You Entered the Requirement which is NOT present in your NGO, Try Again!')
             return redirect('accounts:edit_view')
         else:
             ins = NgoRequirementDetail.objects.get(ngo=myngo, req=requirement)
