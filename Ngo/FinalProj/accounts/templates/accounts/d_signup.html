@@ -6,17 +6,53 @@
     <title>DonaterInfo</title>
     <style>
         body{
-            background-image: url(https://lh3.googleusercontent.com/proxy/XJoRFM4xG7yOV64X1fEC7gWiaWgl0IYd7OcnXfPdAlRua8Op8R4aUldTBWmZF8l0LRk1LTkZ7lgS__tmCKXn63TNDgUGeS7J_OalraDgQJvZFeSNABE);
+            background-image: url(https://images.pexels.com/photos/1040499/pexels-photo-1040499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+        ul{
+            padding-top: 10px;
+            padding-left: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        ul li{
+            padding-top: 10px;
+            list-style: none;
+        }
+        ul li a{
+            position: relative;
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            background:#000000;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            overflow: hidden;
+            transition: 0.5s;
+            z-index: 1;
+        }
+        ul:hover li a{
+            opacity: 0.5;
+        }
+        ul li a:hover{
+            transform: scale(1.4);
+            z-index: 1000;
+            background: #ff3f81;
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <div style="padding-left: 40px; padding-top: 40px;" class="container">
+    <ul>
+        <li data-text="Home"><a href="{% url 'home' %}">Go to Homepage</a></li>
+    </ul>
+    <div style="padding-left: 60px; padding-top: 40px;" class="container">
     <h2 style="color: whitesmoke;">Confirm your Phone Number</h2>
     <form action="{% url 'accounts:d_signup' %}" method="POST">
         {% csrf_token %}
         <strong style="font-size:x-large; color: whitesmoke;">Phone no : </strong><input type='text' name='phone'>
-        <input style="padding-left:10px" type='submit' value='Enter'> 
+        <input style="margin-left: 20px;font-family:'Times New Roman', Times, serif;font-size: large;" type='submit' value='Enter'> 
     </form>
 </div>
 </body>
